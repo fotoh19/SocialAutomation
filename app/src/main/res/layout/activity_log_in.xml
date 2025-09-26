@@ -149,7 +149,7 @@
             app:srcCompat="@drawable/logos_facebook" />
 
         <ImageButton
-            android:id="@+id/imageButton3"
+            android:id="@+id/XBtnLgIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

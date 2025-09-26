@@ -35,4 +35,13 @@ class TokenManager(context: Context)  {
         return Pair(token, secret)
     }
 
+    fun clearTokens() {
+        prefs.edit().clear().apply()
+    }
+
+    fun isLoggedIn(): Boolean {
+        val token = prefs.getString("token", null)
+        val secret = prefs.getString("secret", null)
+        return !token.isNullOrEmpty() && !secret.isNullOrEmpty()
+    }
 }

@@ -1,3 +1,6 @@
+import org.gradle.kotlin.dsl.androidTestImplementation
+import org.gradle.kotlin.dsl.implementation
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -51,7 +54,32 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.firebase.auth)
-    implementation(libs.twitter.core)
-    implementation(libs.twitter)
-    implementation(libs.twitter4j.core)
+//    implementation(libs.twitter.core)
+//    implementation(libs.twitter)
+//    implementation(libs.twitter4j.core)
+
+    implementation(platform(libs.firebase.bom))
+
+    // Firebase Auth
+    implementation(libs.google.firebase.auth)
+
+    // Encrypted SharedPreferences (لتخزين التوكن بأمان)
+    implementation (libs.androidx.security.crypto)
+
+    // ViewModel + Lifecycle
+    implementation (libs.androidx.lifecycle.viewmodel.ktx)
+    implementation (libs.androidx.lifecycle.runtime.ktx)
+
+    // Coroutines
+    implementation (libs.kotlinx.coroutines.android)
+
+    // UI
+    implementation (libs.material)
+    implementation (libs.androidx.appcompat.v170)
+    implementation (libs.androidx.constraintlayout.v214)
+
+    // Test
+    testImplementation (libs.junit)
+    androidTestImplementation (libs.androidx.junit.v121)
+    androidTestImplementation (libs.androidx.espresso.core.v361)
 }
