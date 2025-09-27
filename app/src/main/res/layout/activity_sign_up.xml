@@ -44,7 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/GoogleSignBtn"
         android:layout_width="390dp"
         android:layout_height="70dp"
         android:layout_marginTop="44dp"
@@ -57,13 +57,13 @@
         tools:ignore="ContentDescription" />
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/faceSignBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#00FFFFFF"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton5"
-        app:layout_constraintStart_toStartOf="@id/imageButton5"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton5"
+        app:layout_constraintEnd_toEndOf="@+id/GoogleSignBtn"
+        app:layout_constraintStart_toStartOf="@id/GoogleSignBtn"
+        app:layout_constraintTop_toBottomOf="@+id/GoogleSignBtn"
         app:srcCompat="@drawable/continue_with_facebook__1_"
         tools:ignore="ContentDescription" />
 
@@ -72,10 +72,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#00FFFFFF"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton5"
+        app:layout_constraintEnd_toEndOf="@+id/GoogleSignBtn"
         app:layout_constraintHorizontal_bias="0.476"
-        app:layout_constraintStart_toStartOf="@id/imageButton5"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton6"
+        app:layout_constraintStart_toStartOf="@id/GoogleSignBtn"
+        app:layout_constraintTop_toBottomOf="@+id/faceSignBtn"
         app:srcCompat="@drawable/continue_with_apple"
         tools:ignore="ContentDescription" />
 
@@ -111,10 +111,10 @@
         android:text="@string/or"
         android:textColor="@color/black"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton7"
+        app:layout_constraintEnd_toEndOf="@+id/SignupWithX"
         app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="@+id/imageButton7"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton7" />
+        app:layout_constraintStart_toStartOf="@+id/SignupWithX"
+        app:layout_constraintTop_toBottomOf="@+id/SignupWithX" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
