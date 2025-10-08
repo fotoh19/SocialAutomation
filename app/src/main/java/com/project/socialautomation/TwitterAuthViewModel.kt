@@ -1,6 +1,7 @@
 package com.project.socialautomation
 
 import android.app.Activity
+import android.content.Context
 import androidx.lifecycle.ViewModel
 import com.google.firebase.auth.FirebaseUser
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -8,7 +9,12 @@ import kotlinx.coroutines.flow.StateFlow
 
 class TwitterAuthViewModel(
     private val repository: AuthRepository = AuthRepository()
+
 ) : ViewModel() {
+    private var tokenManager: TokenManager? = null
+    fun initTokenManager(context: Context) {
+        tokenManager = TokenManager(context)
+    }
 
     sealed class AuthState {
         object Idle : AuthState()
@@ -24,7 +30,8 @@ class TwitterAuthViewModel(
         _authState.value = AuthState.Loading
         repository.signInWithTwitter(
             activity,
-            onSuccess = {
+            onSuccess = { token, secret ->
+                tokenManager?.saveTwitterTokens(token, secret)
                 val user = repository.getCurrentUser()
                 if (user != null) {
                     _authState.value = AuthState.Success(user)

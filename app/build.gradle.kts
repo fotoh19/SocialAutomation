@@ -54,16 +54,13 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.firebase.auth)
-//    implementation(libs.twitter.core)
-//    implementation(libs.twitter)
-//    implementation(libs.twitter4j.core)
 
     implementation(platform(libs.firebase.bom))
 
     // Firebase Auth
     implementation(libs.google.firebase.auth)
 
-    // Encrypted SharedPreferences (لتخزين التوكن بأمان)
+    // Encrypted SharedPreferences
     implementation (libs.androidx.security.crypto)
 
     // ViewModel + Lifecycle
@@ -82,4 +79,11 @@ dependencies {
     testImplementation (libs.junit)
     androidTestImplementation (libs.androidx.junit.v121)
     androidTestImplementation (libs.androidx.espresso.core.v361)
+
+    implementation(libs.okhttp)
+    implementation(libs.scribejava.apis)
+    implementation(libs.scribejava.core)
+
+
+    implementation(libs.twitter4j.core.v407)
 }
